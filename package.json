@@ -2,7 +2,6 @@
   "name": "grunt-states-format",
   "description": "Snap states formatter plugin",
   "version": "0.1.0",
-  "private": true,
   "homepage": "https://github.com/Sartxi/states-format",
   "author": {
     "name": "sartxi",
