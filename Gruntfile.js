@@ -10,12 +10,13 @@
 module.exports = function(grunt) {
 
     grunt.task.registerTask('default', ['clean', 'jshint', 'build']);
-    grunt.task.registerTask('build', ['states_format', 'jsbeautifier']);
+    grunt.task.registerTask('build', ['states_format', 'jsbeautifier', 'add_comment:before', 'add_comment:after']);
 
     grunt.task.loadTasks('tasks');
     grunt.task.loadNpmTasks('grunt-contrib-jshint');
     grunt.task.loadNpmTasks('grunt-contrib-clean');
     grunt.task.loadNpmTasks('grunt-jsbeautifier');
+    grunt.task.loadNpmTasks('grunt-add-comment');
 
     grunt.config.init({
         clean: {
@@ -53,6 +54,41 @@ module.exports = function(grunt) {
                         indentSize: 4
                     }
                 }
+            }
+        },
+
+        add_comment: {
+            before: {
+                options: {
+                    comments: ['states:js'],
+                    carriageReturn: "\n",
+                    prepend: true,
+                    syntaxes: {
+                        '.js': '//'
+                    }
+                },
+                files: [{
+                    expand: true,
+                    cwd: './build/',
+                    src:  ['./json/routes.js'],
+                    dest: './build/'
+                }]
+            },
+            after: {
+                options: {
+                    comments: ['endstates'],
+                    carriageReturn: "\n",
+                    prepend: false,
+                    syntaxes: {
+                        '.js': '//'
+                    }
+                },
+                files: [{
+                    expand: true,
+                    cwd: './build/',
+                    src:  ['./json/routes.js'],
+                    dest: './build/'
+                }]
             }
         }
     });

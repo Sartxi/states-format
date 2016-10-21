@@ -1,7 +1,7 @@
 {
   "name": "grunt-states-format",
   "description": "Routes formatter plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/Sartxi/states-format",
   "author": {
     "name": "sartxi",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "grunt": "^1.0.0",
+    "grunt-add-comment": "^1.1.6",
     "grunt-cli": "^1.0.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",

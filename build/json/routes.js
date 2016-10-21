@@ -1,3 +1,4 @@
+// states:js
 .state('home', {
     stateId: 16,
     title: 'Bad Credit and No Credit Financing from Snap! | Apply Now',
@@ -519,3 +520,5 @@
         language: 'EN'
     }
 });
+
+// endstates
