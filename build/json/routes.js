@@ -473,6 +473,20 @@
         zip: null,
         industry: null
     }
+}).state('merchantSearch', {
+    stateId: 611,
+    title: 'Find Snap Merchants near you | Snap Finance',
+    metaDescription: 'Finding Snap Merchants is easy with our Merchant Search',
+    metaKeywords: '',
+    templateUrl: 'views/static/merchantSearch.html',
+    url: '/find-merchants',
+    name: 'merchantSearchzip',
+    type: 'page',
+    pageId: 610,
+    params: {
+        pageId: 610,
+        language: 'EN'
+    }
 }).state('denied', {
     stateId: 600,
     title: 'We\'re sorry we were unable to approve your application',
