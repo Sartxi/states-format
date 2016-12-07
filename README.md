@@ -30,6 +30,7 @@ grunt.initConfig({
                 expand: true,
                 cwd: './src',
                 src:  ['./routes.js'],
+                formattersrc: '../yourformatting.js',
                 dest: './build'
             }]
         }
