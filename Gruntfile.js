@@ -10,7 +10,7 @@
 module.exports = function ( grunt ) {
 
 	grunt.task.registerTask( 'default', [ 'clean', 'jshint', 'build' ] );
-	grunt.task.registerTask( 'build', [ 'states_format', 'jsbeautifier', 'add_comment:before', 'add_comment:after' ] );
+	grunt.task.registerTask( 'build', [ 'script_runner', 'jsbeautifier', 'add_comment:before', 'add_comment:after' ] );
 
 	grunt.task.loadTasks( 'tasks' );
 	grunt.task.loadNpmTasks( 'grunt-contrib-jshint' );
@@ -33,7 +33,7 @@ module.exports = function ( grunt ) {
 			}
 		},
 
-		'states_format': {
+		'script_runner': {
 			routes: {
 				files: [ {
 					expand: true,
