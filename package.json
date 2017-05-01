@@ -1,7 +1,7 @@
 {
 	"name": "grunt-script-runner",
 	"description": "Grunt module for running scripts to format files",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"homepage": "https://github.com/Sartxi/states-format",
 	"author": {
 		"name": "sartxi",

@@ -14,18 +14,18 @@ npm install grunt-script-runner --save-dev
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-states-format');
+grunt.loadNpmTasks('grunt-script-runner');
 ```
 
-## The "states_format" task
+## The "script_runner" task
 
 ### Overview
-In your project's Gruntfile, add a section named `states_format` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `script_runner` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-    states_format: {
-        routes: {
+    script_runner: {
+        name: {
             files: [{
                 expand: true,
                 cwd: './src',
